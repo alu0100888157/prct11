@@ -26,4 +26,11 @@ describe Dieta do
   it "->Probando porcentaje" do
       expect(diet.get_porcentaje()).to eq("(40-45%)")
     end
+    it "->Probando descripcion" do
+      expect(diet.get_descripcion()).to eq("Macarrones\nSpaguetti\n")
+    
+    end
+    it "->Probando conjunto de platos" do
+      expect(diet.get_cjto_platos()).to eq("- Macarrones: 1 1/2 cucharón, 200g\n- Spaguetti: 2 cazo, 100g\n")
+    end
 end
