@@ -33,4 +33,18 @@ describe Dieta do
     it "->Probando conjunto de platos" do
       expect(diet.get_cjto_platos()).to eq("- Macarrones: 1 1/2 cucharón, 200g\n- Spaguetti: 2 cazo, 100g\n")
     end
+    it "->Probando VCT" do
+      expect(diet.get_vct()).to eq("V.C.T | %    356'7kcal | ")
+    end
+    it "->Probando proteina" do
+      expect(diet.get_p_proteina()).to eq("10%")
+    end
+    
+    it "->Probando grasas" do
+      expect(diet.get_p_grasas()).to eq("20%")
+    end
+    
+    it "->Probando hidratos" do
+      expect(diet.get_p_hidratos()).to eq("30%")
+    end
 end
