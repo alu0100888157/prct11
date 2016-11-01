@@ -43,4 +43,28 @@ class Dieta
         # Devuelve un plato
         "- #{@descripcion[i]}" + ": " + "#{@porcion[i]}" + ", " + "#{@gramos[i]}g\n"
     end
+    
+    def get_vct
+        # Devuelve el vct
+        "V.C.T | %    " + "#{@vct}" + "kcal | "
+    end
+    
+    def get_p_proteina
+        # Devuelve porcentaje de proteinas de un conjunto de platos
+        pro = @p_proteina + '%'
+        pro
+        
+    end
+    
+    def get_p_grasas
+        # Devuelve porcentaje de grasas de un conjunto de platos
+        g = @p_grasas + '%'
+        g
+    end
+    
+    def get_p_hidratos
+        # Devuelve porcentaje de hidratos de carbono de un conjunto de platos
+        h = "#{@p_hidratos}" + '%'
+        h
+    end
 end
