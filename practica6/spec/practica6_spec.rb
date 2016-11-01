@@ -20,5 +20,10 @@ describe Dieta do
   it "->Debe existir un objeto y estar inicializado." do
       expect(diet).not_to be_nil
     end
-  
+    it "->Probando titulo" do
+      expect(diet.get_titulo()).to eq("Media mañana")
+    end
+  it "->Probando porcentaje" do
+      expect(diet.get_porcentaje()).to eq("(40-45%)")
+    end
 end
