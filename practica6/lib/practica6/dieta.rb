@@ -4,10 +4,10 @@ require "practica6/version"
 class Dieta
     #Se tiene acceso de lectura y escritura a todos los atributos
     attr_accessor :descripcion, :titulo, :porcentaje, :porcion, :gramos, :vct, :p_proteina, :p_grasas, :p_hidratos
-    #esto es el initilize
     def initialize(descripcion, titulo, porcentaje, porcion, gramos, vct, p_proteina, p_grasas, p_hidratos)
         @descripcion, @titulo, @porcentaje, @porcion, @gramos, @vct, @p_proteina, @p_grasas, @p_hidratos = descripcion, titulo, porcentaje, porcion, gramos, vct, p_proteina, p_grasas, p_hidratos
     end
+    
     
     # Devuelve la referencia formateada del menú
     # TITULO (rango %)
@@ -24,26 +24,6 @@ class Dieta
         s
     end
     
-    def get_titulo
-        # Devuelve el título del menú
-        "#{@titulo}"
-    end
-    
-    def get_porcentaje
-        # Devuelve el porcentaje de la ingesta diaria
-        "(#{@porcentaje}%)"
-    end
-    
-    def get_cjto_platos
-        # Devuelve un conjuntos de platos
-        i=0;
-        platos = "#{get_plato(i)}"
-        for i in 1..@descripcion.size-1
-           platos += "#{get_plato(i)}"
-        end
-        platos
-    end
-    
     def get_descripcion
         #Devuelve la descripcion del plato
         i=0;
@@ -54,9 +34,29 @@ class Dieta
         descrip
     end
     
+    def get_titulo
+        # Devuelve el título del menú
+        "#{@titulo}"
+    end
+    
+    def get_porcentaje
+        # Devuelve el porcentaje de la ingesta diaria
+        "(#{@porcentaje}%)"
+    end
+    
     def get_plato(i)
         # Devuelve un plato
         "- #{@descripcion[i]}" + ": " + "#{@porcion[i]}" + ", " + "#{@gramos[i]}g\n"
+    end
+    
+    def get_cjto_platos
+        # Devuelve un conjuntos de platos
+        i=0;
+        platos = "#{get_plato(i)}"
+        for i in 1..@descripcion.size-1
+           platos += "#{get_plato(i)}"
+        end
+        platos
     end
     
     def get_vct
@@ -82,4 +82,5 @@ class Dieta
         h = "#{@p_hidratos}" + '%'
         h
     end
+
 end
