@@ -9,6 +9,21 @@ class Dieta
         @descripcion, @titulo, @porcentaje, @porcion, @gramos, @vct, @p_proteina, @p_grasas, @p_hidratos = descripcion, titulo, porcentaje, porcion, gramos, vct, p_proteina, p_grasas, p_hidratos
     end
     
+    # Devuelve la referencia formateada del menú
+    # TITULO (rango %)
+    # -Descripcion del plato, porción recomendada de un plato, ingesta en gramos de un plato
+    # V.C.T. | % [valor] kcal | [porcentaje_proteina] % - [porcentaje_grasas] % -[porcentaje_hidratos] % 
+    def to_s
+        s = @titulo + " (" + @porcentaje + "%" + ")" + "\n"
+        i=0;
+        for i in 0..@descripcion.size-1
+            s += "- " + "#{@descripcion[i]}" + ": " + "#{@porcion[i]}" + ", " + "#{@gramos[i]}g\n"
+        end
+        
+        s+= "V.C.T | %    " + @vct + "kcal | " + @p_proteina + "% - " + @p_grasas + "% - " + @p_hidratos + "%"
+        s
+    end
+    
     def get_titulo
         # Devuelve el título del menú
         "#{@titulo}"
