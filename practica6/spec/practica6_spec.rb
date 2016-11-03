@@ -2,6 +2,7 @@ require "spec_helper"
 require "./lib/practica6/dieta"
 
 describe Dieta do
+  #before :all do
   @descripcion = ["Macarrones", "Spaguetti"]
   @titulo = "Media mañana"
   @porcentaje = "40-45"
@@ -13,7 +14,7 @@ describe Dieta do
   @p_hidratos = "30"
   
     diet = Dieta.new(@descripcion, @titulo, @porcentaje, @porcion, @gramos, @vct, @p_proteina, @p_grasas, @p_hidratos)
-    
+    context "Pruebas de la parte dieta" do 
     it "has a version number" do
       expect(Practica6::VERSION).not_to be nil
     end
@@ -50,4 +51,5 @@ describe Dieta do
     it "-> Probando to_s" do
       expect(diet.to_s()).to eq("Media mañana (40-45%)\n- Macarrones: 1 1/2 cucharón, 200g\n- Spaguetti: 2 cazo, 100g\nV.C.T | %    356'7kcal | 10% - 20% - 30%")
     end
+  end
 end
