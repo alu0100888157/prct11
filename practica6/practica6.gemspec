@@ -6,8 +6,8 @@ require 'practica6/version'
 Gem::Specification.new do |spec|
   spec.name          = "practica6"
   spec.version       = Practica6::VERSION
-  spec.authors       = ["Angel Luis Morales Hernandez"]
-  spec.email         = ["alu0100888157@ull.edu.es"]
+  spec.authors       = ["Angel Luis Morales Hernandez y Nicolangelo Famiglietti"]
+  spec.email         = ["alu0100888157@ull.edu.es y alu0100912005@ull.edu.es"]
 
   spec.summary       = %q{Se especifica la información de la práctica}
   spec.description   = %q{Se trata de una clase para hacer dietas}
