@@ -3,6 +3,7 @@ require "spec_helper"
 
 describe List do
     diet = List.new()
+    vector = ["BANANA"]
     context "Pruebas de la parte lista" do 
     it "has a version number" do
       expect(Practica6::VERSION).not_to be nil
