@@ -4,4 +4,7 @@ class Node
             @value = value
             @next = nil
         end
+        def next=(value)
+            @next = value
+        end
 end
