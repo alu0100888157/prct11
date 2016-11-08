@@ -23,5 +23,6 @@ class List
                
                 @ob = @ob.next
             end
+            "#{@var}"
         end
 end
