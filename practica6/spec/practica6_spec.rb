@@ -15,7 +15,7 @@ describe List do
       expect(vector).not_to be_nil
     end
     it "->Debe mostrar una dieta" do
-      expect(diet.to_s).to eq("Media mañana (40-45%)\n- Macarrones: 1 1/2 cucharón, 200g\n- Spaguetti: 2 cazo, 100g\nV.C.T | %    356'7kcal | 10% - 20% - 30%)
+      expect(diet.to_s).to eq("Media mañana (40-45%)\n- Macarrones: 1 1/2 cucharón, 200g\n- Spaguetti: 2 cazo, 100g\nV.C.T | %    356'7kcal | 10% - 20% - 30%")
     end
   end
 end
