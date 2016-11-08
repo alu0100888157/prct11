@@ -10,6 +10,8 @@ describe List do
     it "->Debe existir un objeto y estar inicializado." do
       expect(diet).not_to be_nil
     end
-    
+    it "->Debe existir un objeto y estar inicializado." do
+      expect(vector).not_to be_nil
+    end
   end
 end
