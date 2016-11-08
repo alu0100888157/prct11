@@ -6,6 +6,7 @@ describe List do
     vector = [["Macarrones", "Spaguetti"], "Media mañana", "40-45", ["1 1/2 cucharón","2 cazo"], ["200", "100"], "356'7", "10", "20", "30"]
     diet.add_to_list(vector)
     vector2 = [""]
+    diet.add_to_list(vector2)
     
     context "Pruebas de la parte lista" do 
     it "has a version number" do
