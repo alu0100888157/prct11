@@ -3,6 +3,7 @@ require "spec_helper"
 
 describe List do
     diet = List.new()
+    letras = ["a","b"]
     vector = [["Macarrones", "Spaguetti"], "Media mañana", "40-45", ["1 1/2 cucharón","2 cazo"], ["200", "100"], "356'7", "10", "20", "30"]
     diet.add_to_list(vector)
     vector2 = [["Langosta", "Bocadillo"], "Mañana", "30", ["3 cuchara", "2 tenedor"], ["100","50"], "350", "10", "20", "30"]
