@@ -1,3 +1,5 @@
+Node = Struct.new(:value, :next)
+
 
 class List 
     attr_accessor :head
