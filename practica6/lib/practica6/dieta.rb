@@ -91,7 +91,9 @@ class Alimentos < Dieta
         @grupo = grupo
     end
     def to_s
-        
+        dieta = "Dieta -> #{@grupo}\n"
+        dieta += super.to_s
+        "#{dieta}"
     end
     
 end
