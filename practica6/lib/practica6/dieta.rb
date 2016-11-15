@@ -99,7 +99,7 @@ class Alimentos < Dieta
 end
 
 class Edad < Dieta
-    def initialize (descripcion, titulo, porcentaje, porcion, gramos, vct, p_proteina, p_grasas, p_hidratos)
+    def initialize (descripcion, titulo, porcentaje, porcion, gramos, vct, p_proteina, p_grasas, p_hidratos, edad_from, edad_to)
         
     end
 end

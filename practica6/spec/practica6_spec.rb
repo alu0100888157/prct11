@@ -79,8 +79,9 @@ describe Alimentos do
   @p_proteina = "10"
   @p_grasas = "20"
   @p_hidratos = "30"
-  
-  year = Edad.new(@descripcion, @titulo, @porcentaje, @porcion, @gramos, @vct, @p_proteina, @p_grasas, @p_hidratos)
+  @edad_from = "8"
+  @edad_to = "10"
+  year = Edad.new(@descripcion, @titulo, @porcentaje, @porcion, @gramos, @vct, @p_proteina, @p_grasas, @p_hidratos,@edad_from, @edad_to)
     context "Pruebas de la parte Edad" do
       it "has a version number" do
         expect(Practica6::VERSION).not_to be nil
