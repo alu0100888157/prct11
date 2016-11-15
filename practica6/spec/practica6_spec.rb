@@ -50,5 +50,8 @@ describe Alimentos do
     it "->Debe existir un objeto y estar inicializado." do
       expect(food).not_to be_nil
     end
+    it "->Compruebo que food pertenece a Object" do
+      expect(food.is_a?Object).to eq(true)
+    end
   end
 end
