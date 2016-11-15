@@ -69,4 +69,6 @@ describe Alimentos do
       expect(food.to_s).to eq("Dieta -> Verdura\nMedia mañana (40-45%)\n- Macarrones: 1 1/2 cucharón, 200g\n- Spaguetti: 2 cazo, 100g\nV.C.T | %    356'7kcal | 10% - 20% - 30%")
     end
   end
+  describe Edad do
+  end
 end
