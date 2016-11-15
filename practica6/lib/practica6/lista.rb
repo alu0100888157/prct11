@@ -1,4 +1,4 @@
-Node = Struct.new(:value, :next)
+Node = Struct.new(:value, :next, :prev)
 
 
 class List 
@@ -10,8 +10,10 @@ class List
             node = Node.new(value)
         
             @head = node if @head.nil?
-            @tail.next = node unless @tail.nil?
-        
+            unless @tail.nil?
+                @tail.next = node 
+                node.prev = @tail
+            end
             @tail = node
         end
         def to_s(letras)
