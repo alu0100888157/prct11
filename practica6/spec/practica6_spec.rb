@@ -97,6 +97,9 @@ describe Alimentos do
       it "->Compruebo que year es una instancia de Object" do
       expect(year.instance_of?Object).to eq(false)
       end
+      it "->Compruebo que year es una instancia de Edad" do
+      expect(year.instance_of?Edad).to eq(true)
+      end
     end
   end
 end
