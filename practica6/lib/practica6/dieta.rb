@@ -90,5 +90,8 @@ class Alimentos < Dieta
         super(descripcion, titulo, porcentaje, porcion, gramos, vct, p_proteina, p_grasas, p_hidratos)
         @grupo = grupo
     end
+    def to_s
+        
+    end
     
 end
