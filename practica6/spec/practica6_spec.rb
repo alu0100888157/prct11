@@ -28,6 +28,9 @@ describe List do
       expect(vector3).not_to be_nil
       end
       it "->Debe existir un objeto y estar inicializado." do
+      expect(vector4).not_to be_nil
+      end
+      it "->Debe existir un objeto y estar inicializado." do
         expect(letras).not_to be_nil
       end
       it "->Debe mostrar una dieta" do
