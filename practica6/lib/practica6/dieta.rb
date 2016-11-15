@@ -105,5 +105,8 @@ class Edad < Dieta
         @edad_to = edad_to
     end
     def to_s
+        year = "Dieta -> De #{@edad_from}-#{@edad_to} años\n"
+        year += super.to_s
+        "#{year}"
     end
 end
