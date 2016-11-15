@@ -53,5 +53,8 @@ describe Alimentos do
     it "->Compruebo que food pertenece a Object" do
       expect(food.is_a?Object).to eq(true)
     end
+    it "->Compruebo que food pertenece a BasicObject" do
+      expect(food.is_a?BasicObject).to eq(true)
+    end
   end
 end
