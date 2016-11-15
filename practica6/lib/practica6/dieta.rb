@@ -86,5 +86,9 @@ class Dieta
 end
 
 class Alimentos < Dieta
+    def initialize (descripcion, titulo, porcentaje, porcion, gramos, vct, p_proteina, p_grasas, p_hidratos, grupo)
+        super(descripcion, titulo, porcentaje, porcion, gramos, vct, p_proteina, p_grasas, p_hidratos)
+        @grupo = grupo
+    end
     
 end
