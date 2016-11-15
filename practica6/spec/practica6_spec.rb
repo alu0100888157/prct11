@@ -65,5 +65,8 @@ describe Alimentos do
      it "->Compruebo que Alimento es un hijo de Dieta" do
       expect(Alimentos.superclass).to eq(Dieta)
     end
+    it "->Debe mostrar un grupo" do
+      expect(food.to_s).to eq("Media mañana (40-45%)\n- Macarrones: 1 1/2 cucharón, 200g\n- Spaguetti: 2 cazo, 100g\nV.C.T | %    356'7kcal | 10% - 20% - 30%")
+    end
   end
 end
