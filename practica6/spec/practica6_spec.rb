@@ -70,5 +70,13 @@ describe Alimentos do
     end
   end
   describe Edad do
+    context "Pruebas de la parte Edad" do
+      it "has a version number" do
+        expect(Practica6::VERSION).not_to be nil
+      end
+      it "->Debe existir un objeto y estar inicializado." do
+        expect(year).not_to be_nil
+      end
+    end
   end
 end
