@@ -84,3 +84,7 @@ class Dieta
     end
 
 end
+
+class Alimentos < Dieta
+    
+end
