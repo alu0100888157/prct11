@@ -70,6 +70,17 @@ describe Alimentos do
     end
   end
   describe Edad do
+  @descripcion = ["Macarrones", "Spaguetti"]
+  @titulo = "Media mañana"
+  @porcentaje = "40-45"
+  @porcion = ["1 1/2 cucharón","2 cazo"]
+  @gramos = ["200", "100"]
+  @vct = "356'7"
+  @p_proteina = "10"
+  @p_grasas = "20"
+  @p_hidratos = "30"
+  
+  year = Edad.new(@descripcion, @titulo, @porcentaje, @porcion, @gramos, @vct, @p_proteina, @p_grasas, @p_hidratos)
     context "Pruebas de la parte Edad" do
       it "has a version number" do
         expect(Practica6::VERSION).not_to be nil
