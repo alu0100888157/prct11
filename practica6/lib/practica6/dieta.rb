@@ -97,3 +97,7 @@ class Alimentos < Dieta
     end
     
 end
+
+class Edad
+    
+end
