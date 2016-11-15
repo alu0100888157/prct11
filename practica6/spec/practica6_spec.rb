@@ -93,7 +93,10 @@ describe Alimentos do
       end
       it "->Compruebo que year pertenece a BasicObject" do
       expect(year.is_a?BasicObject).to eq(true)
-    end
+      end
+      it "->Compruebo que year es una instancia de Object" do
+      expect(year.instance_of?Object).to eq(false)
+      end
     end
   end
 end
