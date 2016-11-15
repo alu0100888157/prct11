@@ -104,6 +104,9 @@ describe Alimentos do
       it "->Compruebo que Edad es un hijo de Dieta" do
       expect(Edad.superclass).to eq(Dieta)
       end
+      it "->Debe mostrar un grupo" do
+      expect(year.to_s).to eq("Dieta -> De 8-10 años\nMedia mañana (40-45%)\n- Macarrones: 1 1/2 cucharón, 200g\n- Spaguetti: 2 cazo, 100g\nV.C.T | %    356'7kcal | 10% - 20% - 30%")
+      end
     end
   end
 end

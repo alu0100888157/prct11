@@ -100,6 +100,10 @@ end
 
 class Edad < Dieta
     def initialize (descripcion, titulo, porcentaje, porcion, gramos, vct, p_proteina, p_grasas, p_hidratos, edad_from, edad_to)
-        
+        super(descripcion, titulo, porcentaje, porcion, gramos, vct, p_proteina, p_grasas, p_hidratos)
+        @edad_from = edad_from
+        @edad_to = edad_to
+    end
+    def to_s
     end
 end
