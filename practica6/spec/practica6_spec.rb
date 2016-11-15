@@ -62,5 +62,8 @@ describe Alimentos do
     it "->Compruebo que food es una instancia de Alimento" do
       expect(food.instance_of?Alimentos).to eq(true)
     end
+     it "->Compruebo que Alimento es un hijo de Dieta" do
+      expect(Alimentos.superclass).to eq(Dieta)
+    end
   end
 end
