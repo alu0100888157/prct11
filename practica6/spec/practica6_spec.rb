@@ -57,7 +57,7 @@ describe Alimentos do
       expect(food.is_a?BasicObject).to eq(true)
     end
     it "->Compruebo que food es una instancia de Object" do
-      expect(food.instance_of?BasicObject).to eq(false)
+      expect(food.instance_of?Object).to eq(false)
     end
     it "->Compruebo que food es una instancia de Alimento" do
       expect(food.instance_of?Alimentos).to eq(true)
