@@ -17,6 +17,16 @@ class List
             end
             @tail = node
         end
+        # def extract_end
+        #     var = ""
+        #     if(@tail ==nil)
+        #         return false
+        #     else
+        #         var = @tail.value
+        #         @tail = @tail.prev
+        #         return var
+        #     end
+        # end
         
         def to_s(letras)
             @letras = letras
