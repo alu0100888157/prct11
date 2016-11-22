@@ -13,6 +13,31 @@ describe Dieta do
   @p_hidratos = "30"
   
     diet = Dieta.new(@descripcion, @titulo, @porcentaje, @porcion, @gramos, @vct, @p_proteina, @p_grasas, @p_hidratos)
+    ####################################################
+    @descripcion = ["Macarrones", "Spaguetti"]
+  @titulo = "Media mañana"
+  @porcentaje = "40-45"
+  @porcion = ["1 1/2 cucharón","2 cazo"]
+  @gramos = ["200", "100"]
+  @vct = "350"
+  @p_proteina = "10"
+  @p_grasas = "20"
+  @p_hidratos = "30"
+  
+    diet2 = Dieta.new(@descripcion, @titulo, @porcentaje, @porcion, @gramos, @vct, @p_proteina, @p_grasas, @p_hidratos)
+    
+    ##################################################
+    @descripcion = ["Macarrones", "Spaguetti"]
+  @titulo = "Media mañana"
+  @porcentaje = "40-45"
+  @porcion = ["1 1/2 cucharón","2 cazo"]
+  @gramos = ["200", "100"]
+  @vct = "356'7"
+  @p_proteina = "10"
+  @p_grasas = "20"
+  @p_hidratos = "33"
+  
+    diet3 = Dieta.new(@descripcion, @titulo, @porcentaje, @porcion, @gramos, @vct, @p_proteina, @p_grasas, @p_hidratos)
     context "Pruebas de la parte dieta" do 
     it "has a version number" do
       expect(Practica6::VERSION).not_to be nil
@@ -49,6 +74,18 @@ describe Dieta do
     end
     it "-> Probando to_s" do
       expect(diet.to_s()).to eq("Media mañana (40-45%)\n- Macarrones: 1 1/2 cucharón, 200g\n- Spaguetti: 2 cazo, 100g\nV.C.T | %    356'7kcal | 10% - 20% - 30%")
+    end
+    it "vct diet > vct diet2" do
+      expect(diet > diet2).to eq(true)
+    end
+    it "vct diet !< diet2" do
+      expect(diet < diet2).to eq(false)
+    end
+    it "vct diet !<= diet2" do
+      expect(diet <= diet2).to eq(false)
+    end
+    it "vct diet >= vct diet2" do
+      expect(diet >= diet2).to eq(true)
     end
   end
 end
