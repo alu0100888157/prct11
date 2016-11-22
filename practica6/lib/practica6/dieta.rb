@@ -86,7 +86,13 @@ class Dieta
     def <=> (other)
         @vct<=>other.vct
     end
-
+    def ==(other)
+        if(@vct==other.vct && @p_proteina==other.p_proteina && @p_grasas==other.p_grasas && @p_hidratos==other.p_hidratos)
+            return true
+        else
+            return false
+        end
+    end
 end
 
 class Alimentos < Dieta
