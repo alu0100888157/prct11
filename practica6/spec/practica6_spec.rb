@@ -93,11 +93,11 @@ end
 describe List do
     diet = List.new()
     letras = ["a","b", "c", "d"]
-    vector = [["Macarrones", "Spaguetti"], "Media mañana", "40-45", ["1 1/2 cucharón","2 cazo"], ["200", "100"], "356'7", "10", "20", "30"]
+    vector = [["Macarrones", "Spaguetti"], "Media mañana", "40-45", ["1 1/2 cucharón","2 cazo"], ["200", "100"], "356.7", "10", "20", "30"]
     diet.add_to_list(vector)
     vector2 = [["Langosta", "Bocadillo"], "Mañana", "30", ["3 cuchara", "2 tenedor"], ["100","50"], "350", "10", "20", "30"]
-    vector3 = [["Macarrones", "Spaguetti"], "Media mañana", "40-45", ["1 1/2 cucharón","2 cazo"], ["200", "100"], "356'7", "10", "20", "30", "Verdura"]
-    vector4 = [["Macarrones", "Spaguetti"], "Media mañana", "40-45", ["1 1/2 cucharón","2 cazo"], ["200", "100"], "356'7", "10", "20", "30", "8", "10"]
+    vector3 = [["Macarrones", "Spaguetti"], "Media mañana", "40-45", ["1 1/2 cucharón","2 cazo"], ["200", "100"], "355", "10", "20", "30", "Verdura"]
+    vector4 = [["Macarrones", "Spaguetti"], "Media mañana", "40-45", ["1 1/2 cucharón","2 cazo"], ["200", "100"], "354", "10", "20", "30", "8", "10"]
     diet.add_to_list(vector2)
     diet.add_to_list(vector3)
     diet.add_to_list(vector4)
@@ -125,7 +125,16 @@ describe List do
         expect(letras).not_to be_nil
       end
       it "->Debe mostrar una dieta" do
-      expect(diet.to_s(letras)).to eq("a) Media mañana (40-45%)\n- Macarrones: 1 1/2 cucharón, 200g\n- Spaguetti: 2 cazo, 100g\nV.C.T | %    356'7kcal | 10% - 20% - 30%b) Mañana (30%)\n- Langosta: 3 cuchara, 100g\n- Bocadillo: 2 tenedor, 50g\nV.C.T | %    350kcal | 10% - 20% - 30%c) Dieta -> Verdura\nMedia mañana (40-45%)\n- Macarrones: 1 1/2 cucharón, 200g\n- Spaguetti: 2 cazo, 100g\nV.C.T | %    356'7kcal | 10% - 20% - 30%d) Dieta -> De 8-10 años\nMedia mañana (40-45%)\n- Macarrones: 1 1/2 cucharón, 200g\n- Spaguetti: 2 cazo, 100g\nV.C.T | %    356'7kcal | 10% - 20% - 30%")
+      expect(diet.to_s(letras)).to eq("a) Media mañana (40-45%)\n- Macarrones: 1 1/2 cucharón, 200g\n- Spaguetti: 2 cazo, 100g\nV.C.T | %    356.7kcal | 10% - 20% - 30%b) Mañana (30%)\n- Langosta: 3 cuchara, 100g\n- Bocadillo: 2 tenedor, 50g\nV.C.T | %    350kcal | 10% - 20% - 30%c) Dieta -> Verdura\nMedia mañana (40-45%)\n- Macarrones: 1 1/2 cucharón, 200g\n- Spaguetti: 2 cazo, 100g\nV.C.T | %    355kcal | 10% - 20% - 30%d) Dieta -> De 8-10 años\nMedia mañana (40-45%)\n- Macarrones: 1 1/2 cucharón, 200g\n- Spaguetti: 2 cazo, 100g\nV.C.T | %    354kcal | 10% - 20% - 30%")
+      end
+      it "-> Hallar min" do
+        expect(diet.min).to eq("350")
+      end
+      it "-> Hallar max" do
+        expect(diet.max).to eq("356.7")
+      end
+      it "-> ordenar los vct de menos a mayor" do
+        expect(diet.sort).to eq(["350", "354", "355", "356.7"])
       end
       # it "->Debe extraer por el final" do
       #   diet.extract_end()
