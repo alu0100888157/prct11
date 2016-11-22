@@ -2,6 +2,7 @@
 require "practica6/version"
 
 class Dieta
+    include Comparable
     #Se tiene acceso de lectura y escritura a todos los atributos
     attr_accessor :descripcion, :titulo, :porcentaje, :porcion, :gramos, :vct, :p_proteina, :p_grasas, :p_hidratos
     def initialize(descripcion, titulo, porcentaje, porcion, gramos, vct, p_proteina, p_grasas, p_hidratos)
@@ -81,6 +82,9 @@ class Dieta
         # Devuelve porcentaje de hidratos de carbono de un conjunto de platos
         h = "#{@p_hidratos}" + '%'
         h
+    end
+    def <=> (other)
+        @vct<=>other.vct
     end
 
 end
