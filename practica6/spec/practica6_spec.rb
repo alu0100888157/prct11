@@ -87,6 +87,9 @@ describe Dieta do
     it "vct diet >= vct diet2" do
       expect(diet >= diet2).to eq(true)
     end
+    it "vct diet == vct diet3" do
+      expect(diet == diet3).to eq(false)
+    end
   end
 end
 
