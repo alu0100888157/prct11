@@ -90,10 +90,53 @@ describe List do
       plato   :descripcion => "Mandarina", :porcion => "1 grande", :gramos => 180
       porcent :vct => 489.9, :proteinas => 15, :grasas => 29, :hidratos => 63
     end
+    @desayuno_M = MenuDiet.new("Ejemplo") do
+      met_titulo  "Desayuno"
+      met_ingesta  :max => 15
+      plato   :descripcion => "Leche con tostadas",
+              :porcion => "1 1/2 cucharón",
+              :gramos => 200
+      plato   :descripcion => "Cereales Integrales",
+              :porcion => "Dos puñados",
+              :gramos => 60
+      plato   :descripcion => "Pan de trigo integral con mantequilla", :porcion => "1 rodaja", :gramos => 20
+      porcent :vct => 354.9, :proteinas => 16, :grasas => 23, :hidratos => 30
+    end  
+    @almuerzo_M = MenuDiet.new("Ejemplo") do
+      met_titulo  "Almuerzo"
+      met_ingesta  :min => 30, :max => 35
+      plato   :descripcion => "Salmón con queso parmesano",
+              :porcion => "3 rodajas",
+              :gramos => 150
+      plato   :descripcion => "Salteado de verduras",
+              :porcion => "Medio plato",
+              :gramos => 100
+      plato   :descripcion => "Revuelto de champiñones y gambas",
+              :porcion => "Un plato pequeño",
+              :gramos => 150
+      plato   :descripcion => "Manzana", :porcion => "1 grande", :gramos => 180
+      porcent :vct => 455.9, :proteinas => 12, :grasas => 28, :hidratos => 65
+    end
+    @cena_M = MenuDiet.new("Ejemplo") do
+      met_titulo  "Cena"
+      met_ingesta  :min => 15, :max => 20
+      plato   :descripcion => "Sandwich tropical",
+              :porcion => "1 sandwich",
+              :gramos => 250
+      plato   :descripcion => "Yogur de fresa",
+              :porcion => "1 vasito",
+              :gramos => 125
+      plato   :descripcion => "Pera", :porcion => "1 grande", :gramos => 180
+      porcent :vct => 420.4, :proteinas => 16, :grasas => 32, :hidratos => 52
+    end
     @lunes = List.new()
     @lunes.add(@desayuno_L)
     @lunes.add(@almuerzo_L)
     @lunes.add(@cena_L)
+    @martes = List.new()
+    @martes.add(@desayuno_M)
+    @martes.add(@almuerzo_M)
+    @martes.add(@cena_M)
   end
   it "-> La lista no está vacia" do
     expect(List.new()).not_to be nil
@@ -110,12 +153,29 @@ describe List do
   it "-> Debe existir @lunes y estar inicializado." do
     expect(@lunes).not_to be_nil
   end
-  it "-> Comprobar si el head de @martes está vacío " do
+  it "-> Comprobar si el head de @lunes está vacío " do
     expect(@lunes.head.value).not_to be_nil
   end
-  
   it "->Comprobar si esta vacío" do
     expect(@lunes.empty?).to eq(false)
+  end
+  it "-> Desayuno del martes no nil" do
+    expect(@desayuno_M).not_to be_nil
+  end
+  it "-> Almuerzo del martes no nil" do
+    expect(@almuerzo_M).not_to be_nil
+  end
+  it "-> Cena del martes no nil" do
+    expect(@cena_M).not_to be_nil
+  end
+  it "-> Debe existir @martes y estar inicializado." do
+    expect(@martes).not_to be_nil
+  end
+  it "-> Comprobar si el head de @martes está vacío " do
+    expect(@martes.head.value).not_to be_nil
+  end
+  it "->Comprobar si esta vacío" do
+    expect(@martes.empty?).to eq(false)
   end
 end
 
