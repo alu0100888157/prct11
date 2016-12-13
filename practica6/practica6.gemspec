@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Angel Luis Morales Hernandez y Nicolangelo Famiglietti"]
   spec.email         = ["alu0100888157@ull.edu.es y alu0100912005@ull.edu.es"]
 
-  spec.summary       = %q{Se especifica la información de la práctica}
+  spec.summary       = %q{Se trata de una gema para hacer menús dietéticos}
   spec.description   = %q{Se trata de una clase para hacer dietas}
   spec.homepage      = "https://github.com/ULL-ESIT-LPP-1617/tdd-menu-lpp-41-1"
 
