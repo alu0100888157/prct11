@@ -7,7 +7,9 @@ describe MenuDiet do
     it "-> El proyecto debe tener un numero de version" do
         expect(Practica6::VERSION).not_to be nil
     end
-    
+    it "-> Almuerzo no nil" do
+        expect(almuerzo).not_to be_nil
+    end
     
     
   end
