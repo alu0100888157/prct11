@@ -45,19 +45,63 @@ describe MenuDiet do
 
 end
 describe List do
+  
   before :each do
+    @desayuno_L = MenuDiet.new("Ejemplo") do
+      met_titulo  "Desayuno"
+      met_ingesta  :max => 15
+      plato   :descripcion => "Leche con tostadas",
+              :porcion => " 1 vaso",
+              :gramos => 200 
+      plato   :descripcion => "Cacao instantaneo",
+              :porcion => "1 c/sopera",
+              :gramos => 10
+      plato   :descripcion => "Medio bocadillo de jamón y queso",
+              :porcion => "Mitad de barra",
+              :gramos => 200
+      plato   :descripcion => "Almendras laminadas", :porcion => "(10 unidades) 2 c/soperas", :gramos => 10
+      porcent :vct => 288.0, :proteinas => 48, :grasas => 49, :hidratos => 34
+    end
+    @almuerzo_L = MenuDiet.new("Ejemplo") do
+      met_titulo  "Almuerzo"
+      met_ingesta  :min => 30, :max => 35
+      plato   :descripcion => "Macarrones con salsa de tomate y queso parmesano",
+              :porcion => "1 1/2 cucharón",
+              :gramos => 200
+      plato   :descripcion => "Escalope de ternera",
+              :porcion => "1 bistec mediano",
+              :gramos => 100
+      plato   :descripcion => "Ensalada básica con zanahoria rallada",
+              :porcion => "guarnición",
+              :gramos => 120
+      plato   :descripcion => "Mandarina", :porcion => "1 grande", :gramos => 180
+      plato   :descripcion => "Pan de trigo integral", :porcion => "1 rodaja", :gramos => 20
+      porcent :vct => 785.9, :proteinas => 19, :grasas => 34, :hidratos => 47
+    end
+    @cena_L = MenuDiet.new("Ejemplo") do
+      met_titulo  "Cena"
+      met_ingesta  :min => 15, :max => 20
+      plato   :descripcion => "Pizza 4 quesos",
+              :porcion => "1 pizza",
+              :gramos => 300
+      plato   :descripcion => "Yogur de coco",
+              :porcion => "1 vasito",
+              :gramos => 125
+      plato   :descripcion => "Mandarina", :porcion => "1 grande", :gramos => 180
+      porcent :vct => 489.9, :proteinas => 15, :grasas => 29, :hidratos => 63
+    end
   end
   it "-> La lista no está vacia" do
     expect(List.new()).not_to be nil
   end
   it "-> Desayuno del lunes no nil" do
-    expect(desayuno_L).not_to be_nil
+    expect(@desayuno_L).not_to be_nil
   end
   it "-> Almuerzo del lunes no nil" do
-    expect(almuerzo_L).not_to be_nil
+    expect(@almuerzo_L).not_to be_nil
   end
   it "-> Cena del lunes no nil" do
-    expect(cena_L).not_to be_nil
+    expect(@cena_L).not_to be_nil
   end
 end
 
