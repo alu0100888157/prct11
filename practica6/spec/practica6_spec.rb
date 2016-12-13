@@ -103,6 +103,9 @@ describe List do
   it "-> Cena del lunes no nil" do
     expect(@cena_L).not_to be_nil
   end
+  it "-> Debe existir @lunes y estar inicializado." do
+    expect(@lunes).not_to be_nil
+  end
 end
 
 
