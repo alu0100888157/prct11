@@ -19,6 +19,9 @@ describe MenuDiet do
     it "-> Existe título como Almuerzo" do
         expect(almuerzo.titulo).to eq("Almuerzo")
     end
+    it "-> Existe ingesta" do
+        expect(almuerzo.ingesta).to eq([[30, 35]])
+    end
     
   end
 
