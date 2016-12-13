@@ -4,6 +4,7 @@ describe MenuDiet do
   
   almuerzo = MenuDiet.new("Ejemplo") do
     met_titulo  "Almuerzo"
+    met_ingesta  :min => 30, :max => 35
   end
   context "Prueba de las partes fundamentales de la clase Dieta:" do
     
