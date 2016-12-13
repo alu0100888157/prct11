@@ -15,6 +15,9 @@ describe MenuDiet do
     it "-> Existe name" do
         expect(almuerzo.name).not_to be_nil
     end
+    it "-> Existe título como Almuerzo" do
+        expect(almuerzo.titulo).to eq("Almuerzo")
+    end
     
   end
 
