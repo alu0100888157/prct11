@@ -42,16 +42,28 @@ class List
     
     def extract_tail()
         
-            aux=""
-            if(@tail == nil)
-                return false
-            else
-                aux = @tail.value
-                @tail = @tail.prev
-                return aux
-            end
+        aux=""
+        if(@tail == nil)
+            return false
+        else
+            aux = @tail.value
+            @tail = @tail.prev
+            return aux
+        end
         
         
+    end 
+    def to_s
+        @aux=head
+        aux2=""
+        
+        while @aux != nil do
+
+            aux2 += "#{@aux.value.to_s}"
+            
+            @aux=@aux.next
+        end
+        "#{aux2}"
     end    
     
 
