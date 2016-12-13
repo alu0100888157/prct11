@@ -107,6 +107,13 @@ describe List do
   it "-> Debe existir @lunes y estar inicializado." do
     expect(@lunes).not_to be_nil
   end
+  it "-> Comprobar si el head de @martes está vacío " do
+    expect(@martes.head.value).not_to be_nil
+  end
+  
+  it "->Comprobar si esta vacío" do
+    expect(@lunes.empty?).to eq(false)
+  end
 end
 
 
