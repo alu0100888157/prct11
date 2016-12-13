@@ -3,7 +3,10 @@ require "practica6/version"
 
 class MenuDiet
 
+ attr_accessor :name
+
 def initialize(name, &block)
+    self.name = name
 end
 
 
