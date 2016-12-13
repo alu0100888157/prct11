@@ -91,6 +91,9 @@ describe List do
       porcent :vct => 489.9, :proteinas => 15, :grasas => 29, :hidratos => 63
     end
     @lunes = List.new()
+    @lunes.add(@desayuno_L)
+    @lunes.add(@almuerzo_L)
+    @lunes.add(@cena_L)
   end
   it "-> La lista no está vacia" do
     expect(List.new()).not_to be nil
@@ -108,7 +111,7 @@ describe List do
     expect(@lunes).not_to be_nil
   end
   it "-> Comprobar si el head de @martes está vacío " do
-    expect(@martes.head.value).not_to be_nil
+    expect(@lunes.head.value).not_to be_nil
   end
   
   it "->Comprobar si esta vacío" do
