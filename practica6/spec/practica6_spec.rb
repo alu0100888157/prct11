@@ -90,6 +90,7 @@ describe List do
       plato   :descripcion => "Mandarina", :porcion => "1 grande", :gramos => 180
       porcent :vct => 489.9, :proteinas => 15, :grasas => 29, :hidratos => 63
     end
+    @lunes = List.new()
   end
   it "-> La lista no está vacia" do
     expect(List.new()).not_to be nil
