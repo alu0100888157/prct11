@@ -16,7 +16,7 @@ describe MenuDiet do
             :gramos => 120
     plato   :descripcion => "Mandarina", :porcion => "1 grande", :gramos => 180
     plato   :descripcion => "Pan de trigo integral", :porcion => "1 rodaja", :gramos => 20
-    
+    porcent :vct => 785.9, :proteinas => 19, :grasas => 34, :hidratos => 47
   end
   context "Prueba de las partes fundamentales de la clase Dieta:" do
     
@@ -38,6 +38,9 @@ describe MenuDiet do
     it "-> Dieta Platos" do
         expect(almuerzo.platos).to eq([["Macarrones con salsa de tomate y queso parmesano","1 1/2 cucharón","200"],["Escalope de ternera","1 bistec mediano","100"],["Ensalada básica con zanahoria rallada","guarnición","120"],["Mandarina","1 grande","180"],["Pan de trigo integral","1 rodaja","20"]])
     end
+    it "-> Dieta Almuerzo" do
+        expect(almuerzo.to_s).to eq("Ejemplo\n=======\n\nAlmuerzo [30, 35]\n- Macarrones con salsa de tomate y queso parmesano, 1 1/2 cucharón, 200g\n- Escalope de ternera, 1 bistec mediano, 100g\n- Ensalada básica con zanahoria rallada, guarnición, 120g\n- Mandarina, 1 grande, 180g\n- Pan de trigo integral, 1 rodaja, 20g\nV.C.T. | %   785.9 kcal | 19% - 34% - 47%\n")
+    end 
   end
 
 end
