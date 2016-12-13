@@ -44,7 +44,13 @@ describe MenuDiet do
   end
 
 end
-
+describe List do
+  before :each do
+  end
+  it "-> La lista no está vacia" do
+    expect(List.new()).not_to be nil
+  end
+end
 
 
 
