@@ -3,13 +3,14 @@ require "practica6/version"
 
 class MenuDiet
 
- attr_accessor :name, :titulo, :ingesta, :platos
+ attr_accessor :name, :titulo, :ingesta, :platos, :porcentajes
 
 def initialize(name, &block)
     self.name = name
     self.titulo = ""
     self.ingesta = []
     self.platos = []
+    self.porcentajes = []
     if block_given?
         if block.arity == 1
             yield self
@@ -45,7 +46,37 @@ def plato(options = {})
     platos << aux
 end
 
+def porcent(options = {})
+    val = []
+    val << "#{options[:vct]}"
+    val << "#{options[:proteinas]}"
+    val << "#{options[:grasas]}"
+    val << "#{options[:hidratos]}"
+    
+    porcentajes << val
+    
+end 
 
+
+def to_s
+    output = name
+    output << "\n#{'=' * name.size}\n\n"
+    output << "#{titulo} "
+    ingesta.each do |ingest|
+        output << "#{ingest}\n"
+    end
+    
+    platos.each do |aux|
+       output << "- #{aux[0]}, #{aux[1]}, #{aux[2]}g\n" 
+    end
+    
+    porcentajes.each do |val| 
+        output << "V.C.T. | %   #{val[0]} kcal | #{val[1]}% - #{val[2]}% - #{val[3]}%\n"
+    end
+
+    output
+        
+end
 
 
 
