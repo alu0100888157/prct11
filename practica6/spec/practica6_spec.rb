@@ -50,6 +50,15 @@ describe List do
   it "-> La lista no está vacia" do
     expect(List.new()).not_to be nil
   end
+  it "-> Desayuno del lunes no nil" do
+    expect(desayuno_L).not_to be_nil
+  end
+  it "-> Almuerzo del lunes no nil" do
+    expect(almuerzo_L).not_to be_nil
+  end
+  it "-> Cena del lunes no nil" do
+    expect(cena_L).not_to be_nil
+  end
 end
 
 
