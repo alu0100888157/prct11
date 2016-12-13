@@ -1,6 +1,10 @@
 
 require "practica6/version"
 
+class MenuDiet
+
+def initialize
+end
 
 
 
@@ -11,26 +15,7 @@ require "practica6/version"
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+end
 
 # CÓDIGO DE PRÁCTICAS ANTERIORES, GUARDADOS POR SI LAS MOSCAS
 #//////////////////////////////////////////////////////////////
