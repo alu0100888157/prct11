@@ -12,7 +12,9 @@ describe MenuDiet do
     it "-> Almuerzo no nil" do
         expect(almuerzo).not_to be_nil
     end
-    
+    it "-> Existe name" do
+        expect(almuerzo.name).not_to be_nil
+    end
     
   end
 
