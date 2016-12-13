@@ -137,6 +137,9 @@ describe List do
     @martes.add(@desayuno_M)
     @martes.add(@almuerzo_M)
     @martes.add(@cena_M)
+    @lista_Semanal = List.new()
+    @lista_Semanal.add(@lunes)
+    @lista_Semanal.add(@martes)
   end
   it "-> La lista no está vacia" do
     expect(List.new()).not_to be nil
