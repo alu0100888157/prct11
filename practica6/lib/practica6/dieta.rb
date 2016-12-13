@@ -3,12 +3,13 @@ require "practica6/version"
 
 class MenuDiet
 
- attr_accessor :name, :titulo, :ingesta
+ attr_accessor :name, :titulo, :ingesta, :platos
 
 def initialize(name, &block)
     self.name = name
     self.titulo = ""
     self.ingesta = []
+    self.platos = []
     if block_given?
         if block.arity == 1
             yield self
@@ -35,7 +36,14 @@ def met_ingesta(options = {})
         
 end
 
-
+def plato(options = {})
+    aux = []
+    aux << "#{options[:descripcion]}"
+    aux << "#{options[:porcion]}"
+    aux << "#{options[:gramos]}"
+    
+    platos << aux
+end
 
 
 
