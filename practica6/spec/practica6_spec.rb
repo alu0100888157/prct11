@@ -3,6 +3,7 @@ require "spec_helper"
 describe MenuDiet do
   
   almuerzo = MenuDiet.new("Ejemplo") do
+    met_titulo  "Almuerzo"
   end
   context "Prueba de las partes fundamentales de la clase Dieta:" do
     

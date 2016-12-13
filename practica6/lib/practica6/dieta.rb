@@ -3,12 +3,23 @@ require "practica6/version"
 
 class MenuDiet
 
- attr_accessor :name
+ attr_accessor :name, :titulo
 
 def initialize(name, &block)
     self.name = name
+    self.titulo = ""
+    if block_given?
+        if block.arity == 1
+            yield self
+        else
+            instance_eval &block
+        end
+    end
 end
 
+def met_titulo(name)
+    titulo << name
+end
 
 
 
