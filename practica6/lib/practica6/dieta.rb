@@ -3,7 +3,7 @@ require "practica6/version"
 
 class MenuDiet
 
-def initialize
+def initialize(name, &block)
 end
 
 

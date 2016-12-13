@@ -2,6 +2,8 @@ require "spec_helper"
 
 describe MenuDiet do
   
+  almuerzo = MenuDiet.new("Ejemplo") do
+  end
   context "Prueba de las partes fundamentales de la clase Dieta:" do
     
     it "-> El proyecto debe tener un numero de version" do
